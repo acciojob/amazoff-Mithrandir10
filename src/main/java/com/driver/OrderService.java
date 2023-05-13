@@ -11,7 +11,11 @@ import java.util.Objects;
 public class OrderService {
 
     public OrderService(){}
-    //    @Autowired
+
+    public OrderService(OrderRepository orderRepository) {
+        this.orderRepository = orderRepository;
+    }
+
     OrderRepository orderRepository=new OrderRepository();
 
     public void addOrder(Order order){
