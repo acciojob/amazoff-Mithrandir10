@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 import java.util.Objects;
-@Service
+
 public class OrderService {
 
     OrderRepository orderRepository=new OrderRepository();
