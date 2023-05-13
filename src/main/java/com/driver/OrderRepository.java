@@ -5,6 +5,7 @@ import org.springframework.stereotype.Repository;
 import java.util.*;
 
 
+@Repository
 public class OrderRepository {
     private Map<String,Order> orderMap = new HashMap<>();
     private Map<String,DeliveryPartner> partnerMap = new HashMap<>();
@@ -13,6 +14,13 @@ public class OrderRepository {
 
 
     public OrderRepository() {
+    }
+
+    public OrderRepository(Map<String, Order> orderMap, Map<String, DeliveryPartner> partnerMap, Map<String, String> orderPartnerMap, Map<String, ArrayList<String>> partnerOrdersMap) {
+        this.orderMap = orderMap;
+        this.partnerMap = partnerMap;
+        this.orderPartnerMap = orderPartnerMap;
+        this.partnerOrdersMap = partnerOrdersMap;
     }
 
     public void addOrder(Order order) {

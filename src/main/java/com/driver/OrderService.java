@@ -6,12 +6,17 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Objects;
 
+@Service
 public class OrderService {
-
-    OrderRepository orderRepository=new OrderRepository();
-
     public OrderService() {
     }
+
+    public OrderService(OrderRepository orderRepository) {
+        this.orderRepository = orderRepository;
+    }
+    OrderRepository orderRepository=new OrderRepository();
+
+
 
     public void addOrder(Order order) {
         orderRepository.addOrder(order);
