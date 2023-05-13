@@ -4,7 +4,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
-@Repository
+
 public class OrderRepository {
     private Map<String,Order> orderMap = new HashMap<>();
     private Map<String,DeliveryPartner> partnerMap = new HashMap<>();
@@ -14,7 +14,6 @@ public class OrderRepository {
 
     public OrderRepository() {
     }
-
 
     public void addOrder(Order order) {
         orderMap.put(order.getId(),order);
