@@ -12,6 +12,9 @@ public class OrderRepository {
     private Map<String, ArrayList<String>> partnerOrdersMap = new HashMap<>();
 
 
+    public OrderRepository() {
+    }
+
     public void addOrder(Order order) {
         orderMap.put(order.getId(),order);
     }
