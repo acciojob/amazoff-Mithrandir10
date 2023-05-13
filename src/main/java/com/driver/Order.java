@@ -6,9 +6,8 @@ public class Order {
     private int deliveryTime;
 
     public Order(String id, String deliveryTime) {
-        this.id=id;
-        String[] time =deliveryTime.trim().split(":");
-        this.deliveryTime=Integer.parseInt(time[0])*60 + Integer.parseInt(time[1]);
+        this.deliveryTime = TimeConv.convertTime(deliveryTime);
+        this.id = id;
     }
 
     public void setId(String id) {
@@ -24,12 +23,4 @@ public class Order {
     }
 
     public int getDeliveryTime() {return deliveryTime;}
-
-    @Override
-    public String toString() {
-        return "Order{" +
-                "id='" + id + '\'' +
-                ", deliveryTime=" + deliveryTime +
-                '}';
-    }
 }
